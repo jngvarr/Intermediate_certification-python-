@@ -3,7 +3,10 @@
 # заметок, редактировать заметку, удалять заметку.
 
 import os
+import menu
 os.system("cls")
 
-import menu
-menu.user_menu() 
+
+
+if __name__ == '__main__':
+    menu.user_menu()

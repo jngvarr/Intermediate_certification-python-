@@ -5,7 +5,6 @@ import datetime
 note_id_counter = 0
 notes = {}
 
-
 def create_note():
 
     new_note = dict()
@@ -14,7 +13,6 @@ def create_note():
     new_note['note_text'] = input("Input note body: ")
     new_note['create/edit_time'] = datetime.datetime.today().strftime(
         "%Y-%m-%d_%H:%M:%S")
-    # new_note['edit_time'] = new_note['create_time']
     save_note_to_file(new_note)
     os.system("cls")
     menu.user_menu()
@@ -36,7 +34,6 @@ def get_last_note_ID():
             return int(note_id_counter)
     else:
         return 0
-
 
 def isFileExists():
     return os.path.exists(os.path.dirname(os.path.abspath(__file__)) + '\\notes.csv')
